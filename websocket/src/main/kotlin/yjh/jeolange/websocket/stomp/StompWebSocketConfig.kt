@@ -27,5 +27,4 @@ class StompWebSocketConfig : WebSocketMessageBrokerConfigurer {
             .addEndpoint("/stomp")
             .setAllowedOriginPatterns("*")
     }
-
 }

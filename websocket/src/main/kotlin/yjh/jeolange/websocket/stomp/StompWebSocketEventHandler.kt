@@ -1,9 +1,13 @@
 package yjh.jeolange.websocket.stomp
 
 import org.springframework.context.event.EventListener
-import org.springframework.stereotype.Component
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor
-import org.springframework.web.socket.messaging.*
+import org.springframework.stereotype.Component
+import org.springframework.web.socket.messaging.SessionConnectEvent
+import org.springframework.web.socket.messaging.SessionConnectedEvent
+import org.springframework.web.socket.messaging.SessionDisconnectEvent
+import org.springframework.web.socket.messaging.SessionSubscribeEvent
+import org.springframework.web.socket.messaging.SessionUnsubscribeEvent
 
 /**
  * WebSocket 세션과 관련된 이벤트를 처리하며,클라이언트의 연결 상태, 구독 상태 등을 모니터링합니다.
@@ -37,5 +41,4 @@ class StompWebSocketEventHandler {
     fun handleWebSocketSessionDisconnectEventListener(event: SessionDisconnectEvent) {
         println("클라이언트와의 WebSocket 연결이 종료되었습니다.")
     }
-
 }

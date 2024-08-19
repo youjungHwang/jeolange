@@ -49,7 +49,6 @@ fun main() {
     val ascendingRank = jedis.zrangeWithScores("game:score", 0, -1)
     val descendingRank = jedis.zrevrangeWithScores("game:score", 0, -1)
     descendingRank.forEach { println("${it.element} ${it.score}") }
-
 }
 
 /**
