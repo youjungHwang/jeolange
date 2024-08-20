@@ -1,7 +1,40 @@
 ## Spring Boot + Kotlin
 
 ### 프로젝트 구조
-
+```kotlin
+api
+├── board
+│   ├── application
+│   │   ├── port
+│   │   │   └── BoardRepository
+│   │   └── BoardService
+│   ├── domain
+│   │   ├── Board
+│   │   ├── BoardCreateCommand
+│   │   ├── BoardUpdateCommand
+│   │   └── BoardValidator
+│   ├── infrastructure
+│   │   ├── jooq
+│   │   │   └── BoardJooqRepository
+│   │   ├── jpa
+│   │   │   ├── BoardEntity
+│   │   │   └── BoardJpaRepository
+│   │   └── BoardRepositoryAdapter
+│   └── presentation
+│       ├── request
+│       │   ├── BoardCreateRequest.kt
+│       │   └── BoardUpdateRequest.kt
+│       ├── response
+│       │   └── BoardResponse
+│       └── BoardController
+└── common
+    ├── response
+    │   ├── ErrorResponse
+    │   └── Response
+    ├── BaseErrorCode
+    ├── BaseException
+    └── GlobalControllerAdvice
+```
 ---
 ### 코틀린 활용하기
 ### 🎃 data class
