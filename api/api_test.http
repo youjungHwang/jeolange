@@ -1,0 +1,27 @@
+### 게시글 생성
+POST http://localhost:8080/v1/boards
+Content-Type: application/json
+
+{
+    "title": "게시글 제목",
+    "content": "게시글 내용"
+}
+
+### 게시글 수정
+PUT http://localhost:8080/v1/boards/1
+Content-Type: application/json
+
+{
+    "title": "게시글 제목 수정 완료",
+    "content": "게시글 내용 수정 완료"
+}
+
+### 게시글 삭제
+DELETE http://localhost:8080/v1/boards/1
+
+### 게시글 상세조회
+GET http://localhost:8080/v1/boards/1
+
+### 게시글 목록조회
+GET http://localhost:8080/v1/boards?page=0&size=10
+
