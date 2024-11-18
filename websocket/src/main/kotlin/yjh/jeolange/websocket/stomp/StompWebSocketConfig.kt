@@ -23,8 +23,8 @@ class StompWebSocketConfig : WebSocketMessageBrokerConfigurer {
     // STOMP 엔드포인트를 등록합니다. 클라이언트는 이 엔드포인트를 통해 WebSocket 연결을 설정합니다.
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
         registry
-            // 클라이언트가 연결할 엔드포인트 URL을 "/stomp"로 설정합니다.
-            .addEndpoint("/stomp")
+            // 클라이언트는 "/connect/websocket" 으로 연결을 시도할 수 있다.
+            .addEndpoint("/connect/websocket")
             .setAllowedOriginPatterns("*")
     }
 }
